@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,6 @@ namespace DITema4_Ejercicio2
         byte r;
         byte g;
         byte b;
-        string path;
 
         public Form1()
         {
@@ -69,15 +69,22 @@ namespace DITema4_Ejercicio2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            path = textBox4.Text;
-            if(path.Contains(".jpg") || path.Contains(".png") || path.Contains(".jpeg") || path.Contains(".gif"))
+            if (File.Exists(textBox4.Text))
             {
-                pictureBox1.Image = System.Drawing.Image.FromFile(path);
+                if (Path.GetExtension(textBox4.Text) == ".jpg" || Path.GetExtension(textBox4.Text) == ".png" || Path.GetExtension(textBox4.Text) == ".gif")
+                {
+                    pictureBox1.Image = System.Drawing.Image.FromFile(textBox4.Text);
+                }
+                else
+                {
+                    MessageBox.Show("La ruta no contiene una imagen");
+                }
             }
             else
             {
-                MessageBox.Show("La ruta no contiene una imagen");
+                MessageBox.Show("El archivo no existe");
             }
+            
            
         }
 

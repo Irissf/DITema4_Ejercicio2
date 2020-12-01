@@ -54,7 +54,7 @@ namespace DITema4_Ejercicio2
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(158, 20);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Click += new System.EventHandler(this.BotonDeEnter);
+            this.textBox1.Enter += new System.EventHandler(this.BotonDeEnter);
             // 
             // label1
             // 
@@ -73,7 +73,7 @@ namespace DITema4_Ejercicio2
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(158, 20);
             this.textBox2.TabIndex = 2;
-            this.textBox2.Click += new System.EventHandler(this.BotonDeEnter);
+            this.textBox2.Enter += new System.EventHandler(this.BotonDeEnter);
             // 
             // textBox3
             // 
@@ -82,7 +82,7 @@ namespace DITema4_Ejercicio2
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(158, 20);
             this.textBox3.TabIndex = 3;
-            this.textBox3.Click += new System.EventHandler(this.BotonDeEnter);
+            this.textBox3.Enter += new System.EventHandler(this.BotonDeEnter);
             // 
             // label2
             // 
@@ -147,7 +147,7 @@ namespace DITema4_Ejercicio2
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(520, 20);
             this.textBox4.TabIndex = 9;
-            this.textBox4.Click += new System.EventHandler(this.BotonDeEnter);
+            this.textBox4.Enter += new System.EventHandler(this.BotonDeEnter);
             // 
             // button3
             // 
@@ -207,6 +207,7 @@ namespace DITema4_Ejercicio2
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Salir);
+            this.Enter += new System.EventHandler(this.BotonDeEnter);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
